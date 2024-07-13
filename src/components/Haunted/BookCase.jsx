@@ -30,7 +30,6 @@ export function BookCase(props) {
       friction: 40,
     },
     loop: true,
-    pause: true,
   });
 
   return (

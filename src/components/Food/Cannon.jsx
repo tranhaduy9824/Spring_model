@@ -7,6 +7,7 @@ import { useGLTF } from "@react-three/drei";
 import React, { useRef } from "react";
 
 import { Candy } from "./Candy";
+import { wawaterials } from "../../utils/wawaterials";
 
 export default function Cannon(props) {
   const group = useRef();
@@ -35,68 +36,58 @@ export default function Cannon(props) {
       friction: 50,
     },
     loop: true,
-    pause: true,
   });
 
   return (
     <group ref={group} {...props} dispose={null}>
       <group position={[0, 0, 0]}>
-        <mesh
-          geometry={nodes.cannonMobile_8angles_1.geometry}
-          material={nodes.cannonMobile_8angles_1.material}
-        />
-        <mesh
-          geometry={nodes.cannonMobile_8angles_2.geometry}
-          material={nodes.cannonMobile_8angles_2.material}
-        />
+        <mesh geometry={nodes.cannonMobile_8angles_1.geometry}>
+          <meshStandardMaterial {...wawaterials.brown} />
+        </mesh>
+        <mesh geometry={nodes.cannonMobile_8angles_2.geometry}>
+          <meshStandardMaterial {...wawaterials.brown} />
+        </mesh>
         <group position={[-0.22, 0.13, 0.26]}>
-          <mesh
-            geometry={nodes.wheel_backLeft_1.geometry}
-            material={nodes.wheel_backLeft_1.material}
-          />
-          <mesh
-            geometry={nodes.wheel_backLeft_2.geometry}
-            material={nodes.wheel_backLeft_2.material}
-          />
+          <mesh geometry={nodes.wheel_backLeft_1.geometry}>
+            <meshStandardMaterial {...wawaterials.metal} />
+          </mesh>
+          <mesh geometry={nodes.wheel_backLeft_2.geometry}>
+            <meshStandardMaterial {...wawaterials.brown} />
+          </mesh>
         </group>
         <group position={[0.22, 0.13, 0.26]} rotation={[Math.PI, 0, Math.PI]}>
-          <mesh
-            geometry={nodes.wheel_backLeft_1.geometry}
-            material={nodes.wheel_backLeft_1.material}
-          />
-          <mesh
-            geometry={nodes.wheel_backLeft_2.geometry}
-            material={nodes.wheel_backLeft_2.material}
-          />
+          <mesh geometry={nodes.wheel_backLeft_1.geometry}>
+            <meshStandardMaterial {...wawaterials.metal} />
+          </mesh>
+          <mesh geometry={nodes.wheel_backLeft_2.geometry}>
+            <meshStandardMaterial {...wawaterials.brown} />
+          </mesh>
         </group>
         <group position={[-0.22, 0.13, -0.2]}>
-          <mesh
-            geometry={nodes.wheel_backLeft_1.geometry}
-            material={nodes.wheel_backLeft_1.material}
-          />
-          <mesh
-            geometry={nodes.wheel_backLeft_2.geometry}
-            material={nodes.wheel_backLeft_2.material}
-          />
+          <mesh geometry={nodes.wheel_backLeft_1.geometry}>
+            <meshStandardMaterial {...wawaterials.metal} />
+          </mesh>
+          <mesh geometry={nodes.wheel_backLeft_2.geometry}>
+            <meshStandardMaterial {...wawaterials.brown} />
+          </mesh>
         </group>
         <group position={[0.22, 0.13, -0.2]} rotation={[Math.PI, 0, Math.PI]}>
-          <mesh
-            geometry={nodes.wheel_backLeft_1.geometry}
-            material={nodes.wheel_backLeft_1.material}
-          />
-          <mesh
-            geometry={nodes.wheel_backLeft_2.geometry}
-            material={nodes.wheel_backLeft_2.material}
-          />
+          <mesh geometry={nodes.wheel_backLeft_1.geometry}>
+            <meshStandardMaterial {...wawaterials.metal} />
+          </mesh>
+          <mesh geometry={nodes.wheel_backLeft_2.geometry}>
+            <meshStandardMaterial {...wawaterials.brown} />
+          </mesh>
         </group>
         <animated.mesh
           scale-x={cannonScale}
           scale-y={cannonScale}
           scale-z={cannonScale}
           geometry={nodes.barrel_2.geometry}
-          material={nodes.barrel_2.material}
           position={[0, 0.45, -0.07]}
-        />
+        >
+          <meshStandardMaterial {...wawaterials.metal} />
+        </animated.mesh>
       </group>
       <animated.group position-z={candyZ}>
         <Candy

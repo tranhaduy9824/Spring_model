@@ -19,7 +19,6 @@ export function TargetStand(props) {
     ],
     config: config.stiff,
     loop: true,
-    pause: true,
   });
 
   const group = useRef();
