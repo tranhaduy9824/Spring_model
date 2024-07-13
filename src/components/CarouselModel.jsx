@@ -7,7 +7,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 const CarouselModel = (props) => {
-  const { nodes, materials } = useGLTF("/public/models/carousel/model.gltf");
+  const { nodes, materials } = useGLTF("/models/carousel/model.gltf");
   return (
     <group {...props} dispose={null}>
       <group position={[0, 4, 0]}>
@@ -43,4 +43,4 @@ const CarouselModel = (props) => {
 
 export default CarouselModel;
 
-useGLTF.preload("/public/models/carousel/model.gltf");
+useGLTF.preload("/models/carousel/model.gltf");
