@@ -8,7 +8,7 @@ import React, { useRef } from "react";
 import { wawaterials } from "../../utils/wawaterials";
 
 export function FerrisWheel(props) {
-  const { nodes, materials } = useGLTF("./models/ferris-wheel/model.gltf");
+  const { nodes, materials } = useGLTF("/models/ferris-wheel/model.gltf");
   const refLight = useRef();
 
   useFrame((state) => {
@@ -77,4 +77,4 @@ export function FerrisWheel(props) {
   );
 }
 
-useGLTF.preload("./models/ferris-wheel/model.gltf");
+useGLTF.preload("/models/ferris-wheel/model.gltf");

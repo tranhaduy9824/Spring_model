@@ -7,7 +7,7 @@ import React, { useRef } from "react";
 import { wawaterials } from "../../utils/wawaterials";
 export function Cauldron(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("./models/cauldron/model.gltf");
+  const { nodes, materials } = useGLTF("/models/cauldron/model.gltf");
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh
@@ -29,4 +29,4 @@ export function Cauldron(props) {
   );
 }
 
-useGLTF.preload("./models/cauldron/model.gltf");
+useGLTF.preload("/models/cauldron/model.gltf");

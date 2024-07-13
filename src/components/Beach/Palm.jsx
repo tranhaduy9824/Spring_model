@@ -9,7 +9,7 @@ import { wawaterials } from "../../utils/wawaterials";
 export function Palm(props) {
   const group = useRef();
   const { nodes, materials } = useGLTF(
-    "./models/palm-detailed-long/model.gltf"
+    "/models/palm-detailed-long/model.gltf"
   );
   return (
     <group ref={group} {...props} dispose={null}>
@@ -33,4 +33,4 @@ export function Palm(props) {
   );
 }
 
-useGLTF.preload("./models/palm-detailed-long/model.gltf");
+useGLTF.preload("/models/palm-detailed-long/model.gltf");

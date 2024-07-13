@@ -22,7 +22,7 @@ export function TargetStand(props) {
   });
 
   const group = useRef();
-  const { nodes, materials } = useGLTF("./models/target-stand/model.gltf");
+  const { nodes, materials } = useGLTF("/models/target-stand/model.gltf");
   return (
     <group ref={group} {...props} dispose={null}>
       <animated.group rotation={[Math.PI / 2, 0, 0]} position-x={posX}>
@@ -43,4 +43,4 @@ export function TargetStand(props) {
   );
 }
 
-useGLTF.preload("./models/target-stand/model.gltf");
+useGLTF.preload("/models/target-stand/model.gltf");

@@ -7,7 +7,7 @@ import React, { useRef } from "react";
 
 export function Witch(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("./models/witch/model.gltf");
+  const { nodes, materials } = useGLTF("/models/witch/model.gltf");
   return (
     <group ref={group} {...props} dispose={null}>
       <group rotation={[Math.PI / 2, 0, 0]}>
@@ -80,4 +80,4 @@ export function Witch(props) {
   );
 }
 
-useGLTF.preload("./models/witch/model.gltf");
+useGLTF.preload("/models/witch/model.gltf");

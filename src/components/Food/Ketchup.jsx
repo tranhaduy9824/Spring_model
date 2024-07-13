@@ -8,7 +8,7 @@ import React, { useRef } from "react";
 import { wawaterials } from "../../utils/wawaterials";
 export function Ketchup(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("./models/bottle-ketchup/model.gltf");
+  const { nodes, materials } = useGLTF("/models/bottle-ketchup/model.gltf");
   return (
     <animated.group ref={group} {...props} dispose={null}>
       <mesh
@@ -22,4 +22,4 @@ export function Ketchup(props) {
   );
 }
 
-useGLTF.preload("./models/bottle-ketchup/model.gltf");
+useGLTF.preload("/models/bottle-ketchup/model.gltf");

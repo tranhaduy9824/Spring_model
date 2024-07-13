@@ -11,7 +11,7 @@ import { wawaterials } from "../../utils/wawaterials";
 
 export function HotDog(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("./models/hot-dog/model.gltf");
+  const { nodes, materials } = useGLTF("/models/hot-dog/model.gltf");
 
   const {
     mustardPosition,
@@ -106,4 +106,4 @@ export function HotDog(props) {
   );
 }
 
-useGLTF.preload("./models/hot-dog/model.gltf");
+useGLTF.preload("/models/hot-dog/model.gltf");

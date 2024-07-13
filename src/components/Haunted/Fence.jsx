@@ -7,7 +7,7 @@ import React, { useRef } from "react";
 
 export function Fence(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("./models/fence/model.gltf");
+  const { nodes, materials } = useGLTF("/models/fence/model.gltf");
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh
@@ -22,4 +22,4 @@ export function Fence(props) {
   );
 }
 
-useGLTF.preload("./models/fence/model.gltf");
+useGLTF.preload("/models/fence/model.gltf");

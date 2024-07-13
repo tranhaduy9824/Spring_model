@@ -8,7 +8,7 @@ import React, { useRef } from "react";
 export function BeachBall(props) {
   const group = useRef();
 
-  const { nodes, materials } = useGLTF("./models/beach-ball/model.gltf");
+  const { nodes, materials } = useGLTF("/models/beach-ball/model.gltf");
   return (
     <animated.group ref={group} {...props} dispose={null}>
       <mesh
@@ -31,4 +31,4 @@ export function BeachBall(props) {
   );
 }
 
-useGLTF.preload("./models/beach-ball/model.gltf");
+useGLTF.preload("/models/beach-ball/model.gltf");

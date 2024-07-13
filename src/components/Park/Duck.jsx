@@ -7,7 +7,7 @@ import { useGLTF } from "@react-three/drei";
 import React, { useRef } from "react";
 export default function Duck(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("./models/duck/model.gltf");
+  const { nodes, materials } = useGLTF("/models/duck/model.gltf");
   return (
     <animated.group ref={group} {...props} dispose={null}>
       <mesh
@@ -48,4 +48,4 @@ export default function Duck(props) {
   );
 }
 
-useGLTF.preload("./models/duck/model.gltf");
+useGLTF.preload("/models/duck/model.gltf");

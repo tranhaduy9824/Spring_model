@@ -11,7 +11,7 @@ import { wawaterials } from "../../utils/wawaterials";
 
 export default function Cannon(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("./models/cannon-mobile/model.gltf");
+  const { nodes, materials } = useGLTF("/models/cannon-mobile/model.gltf");
 
   const { cannonScale, candyZ, candyOpacity } = useSpring({
     from: {
@@ -101,4 +101,4 @@ export default function Cannon(props) {
   );
 }
 
-useGLTF.preload("./models/cannon-mobile/model.gltf");
+useGLTF.preload("/models/cannon-mobile/model.gltf");

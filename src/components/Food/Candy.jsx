@@ -7,7 +7,7 @@ import { useGLTF } from "@react-three/drei";
 import React, { useRef } from "react";
 export function Candy(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("./models/candy/model.gltf");
+  const { nodes, materials } = useGLTF("/models/candy/model.gltf");
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh
@@ -34,4 +34,4 @@ export function Candy(props) {
   );
 }
 
-useGLTF.preload("./models/candy/model.gltf");
+useGLTF.preload("/models/candy/model.gltf");

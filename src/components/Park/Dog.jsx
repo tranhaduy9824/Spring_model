@@ -7,7 +7,7 @@ import React, { useRef } from "react";
 
 export default function Dog(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("./models/dog/model.gltf");
+  const { nodes, materials } = useGLTF("/models/dog/model.gltf");
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh
@@ -44,4 +44,4 @@ export default function Dog(props) {
   );
 }
 
-useGLTF.preload("./models/dog/model.gltf");
+useGLTF.preload("/models/dog/model.gltf");

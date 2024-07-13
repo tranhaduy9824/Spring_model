@@ -8,7 +8,7 @@ import React, { useRef } from "react";
 import { wawaterials } from "../../utils/wawaterials";
 export function Mustard(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("./models/bottle-musterd/model.gltf");
+  const { nodes, materials } = useGLTF("/models/bottle-musterd/model.gltf");
   return (
     <animated.group ref={group} {...props} dispose={null}>
       <mesh geometry={nodes.bottleMusterd.geometry} scale={0.21}>
@@ -18,4 +18,4 @@ export function Mustard(props) {
   );
 }
 
-useGLTF.preload("./models/bottle-musterd/model.gltf");
+useGLTF.preload("/models/bottle-musterd/model.gltf");

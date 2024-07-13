@@ -9,7 +9,7 @@ import { wawaterials } from "../../utils/wawaterials";
 
 export function IceCream(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("./models/ice-cream/model.gltf");
+  const { nodes, materials } = useGLTF("/models/ice-cream/model.gltf");
 
   const { iceCreamScale, iceCreamY, coneRotationY } = useSpring({
     from: {
@@ -63,4 +63,4 @@ export function IceCream(props) {
   );
 }
 
-useGLTF.preload("./models/ice-cream/model.gltf");
+useGLTF.preload("/models/ice-cream/model.gltf");

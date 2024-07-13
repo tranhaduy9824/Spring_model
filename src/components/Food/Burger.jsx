@@ -9,7 +9,7 @@ import { wawaterials } from "../../utils/wawaterials";
 
 export default function Burger(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("./models/burger/model.gltf");
+  const { nodes, materials } = useGLTF("/models/burger/model.gltf");
 
   const { bunBottomPos, bunTopPos, cheesePos, saladPos, tomatoPos, pattyPos } =
     useSpring({
@@ -96,4 +96,4 @@ export default function Burger(props) {
   );
 }
 
-useGLTF.preload("./models/burger/model.gltf");
+useGLTF.preload("/models/burger/model.gltf");

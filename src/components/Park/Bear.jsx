@@ -7,7 +7,7 @@ import React, { useRef } from "react";
 
 export default function Bear(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("./models/bear/model.gltf");
+  const { nodes, materials } = useGLTF("/models/bear/model.gltf");
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh
@@ -40,4 +40,4 @@ export default function Bear(props) {
   );
 }
 
-useGLTF.preload("./models/bear/model.gltf");
+useGLTF.preload("/models/bear/model.gltf");

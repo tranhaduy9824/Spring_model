@@ -8,7 +8,7 @@ import React, { useRef } from "react";
 
 export function BookCase(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("./models/bookcase-wide/model.gltf");
+  const { nodes, materials } = useGLTF("/models/bookcase-wide/model.gltf");
 
   const { shelfPosition, booksScale } = useSpring({
     from: {

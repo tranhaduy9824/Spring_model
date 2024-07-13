@@ -7,7 +7,7 @@ import React, { useRef } from "react";
 
 export function ShipLight(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("./models/ship-light/model.gltf");
+  const { nodes, materials } = useGLTF("/models/ship-light/model.gltf");
   return (
     <group ref={group} {...props} dispose={null}>
       <group position={[-0.72, 0, 0.01]}>
@@ -208,4 +208,4 @@ export function ShipLight(props) {
   );
 }
 
-useGLTF.preload("./models/ship-light/model.gltf");
+useGLTF.preload("/models/ship-light/model.gltf");
